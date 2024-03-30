@@ -16,6 +16,22 @@ img {
     width: 100%;
 }
 
+input {
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 1.5rem;
+
+    box-sizing: border-box;
+}
+input:focus {
+    background-color: #E8F0FD;
+    outline: none;
+}
 
 
 .container {
@@ -26,9 +42,6 @@ img {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-
-    
-
 }
 
 .header {
@@ -46,12 +59,10 @@ img {
     display: flex;
     flex-direction: column;
 
-
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     box-sizing: border-box;
 }
-
 .menu_title {
     display: flex;
     flex-direction: column;
@@ -69,9 +80,8 @@ img {
     justify-content: space-around;
     align-items: center;
 }
-
 .card {
-    width: 30%;
+    width: 100%;
     margin: 25px;
     padding: 10px;
     border-radius: 8px;
@@ -83,7 +93,6 @@ img {
     font-size: 1rem;
     font-weight: 700;
 
-
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .price {
@@ -91,20 +100,29 @@ img {
     font-weight: 700;
     color: #1F5C20;
 }
+
 .personal_data {
     background-color: #f5f5f5;
     width: 100%;
     padding: 10px;
     margin-top: 20px;
     border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
 
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.forms {
+    width: 85%;
+    margin: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
 
-    box-sizing: border-box;
 }
 
 .btn_calc {
