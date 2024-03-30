@@ -136,3 +136,9 @@ input:focus {
     font-size: 1.2rem;
     color: #fff;
 }
+.btn_calc:focus {
+    outline: none;
+}
+.btn_calc:hover {
+    cursor: pointer     ;
+}
