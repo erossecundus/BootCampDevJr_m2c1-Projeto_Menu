@@ -13,14 +13,29 @@ function calc() {
     var quantities  = document.getElementsByName("quantity");
     var output      = document.getElementById("output");
     var total       = 0;
+    var clientName      = document.getElementById("name")
 
-    output.innerHTML = "";
-   
+    var formatter = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+    });
+
+    output.innerHTML = `<p>Caro <strong>${clientName.value}</strong></p>`;
+    output.innerHTML += `<p></br>Seguem os dados do seu pedido.<br><br>Seu pedido é:</p><ul>`
     
     for (var input of quantities) {
-        output.innerHTML += `Prato: ${prod[input.id-1].name} - Valor parcial: ${parseFloat(input.value)*prod[input.id-1].price} </br>`;
-        total            += parseFloat(input.value)*prod[input.id-1].price;
+        if (parseFloat(input.value)){
+            output.innerHTML += `<li>Prato: ${prod[input.id-1].name} - 
+                                Preço unitário: ${formatter.format(prod[input.id-1].price)} - 
+                                Quantidade: ${input.value} - 
+                                Total: ${formatter.format(parseFloat(input.value)*prod[input.id-1].price)}`;
+            total            += parseFloat(input.value)*prod[input.id-1].price;
+        }
     }
 
-    output.innerHTML += `<h2>Total: ${total}</h2>`;
+    output.innerHTML += `</ul><p></br><h2>Preço final: ${formatter.format(total)}</h2>`;
+
+    
+
+
 }

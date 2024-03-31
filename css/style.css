@@ -9,7 +9,7 @@ h1 {
 
 h2 {
     font-size: 1.3rem;
-    margin: 10px;
+    margin: 10px 0px;
 }
 
 img {
@@ -29,8 +29,9 @@ input {
     box-sizing: border-box;
 }
 input:focus {
-    background-color: #E8F0FD;
+    background-color: #fff;
     outline: none;
+    box-shadow: 0 0px 12px 0 #0069D9;
 }
 
 
@@ -126,9 +127,9 @@ input:focus {
 }
 
 .btn_calc {
-    background-color: #0069D9;
+    background-color: #0069d9;
     width: 100%;
-    margin-top: 12px;
+    margin-top: 20px;
     border-radius: 4px;
     border: none;
     padding: 16px;
@@ -140,5 +141,6 @@ input:focus {
     outline: none;
 }
 .btn_calc:hover {
-    cursor: pointer     ;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
